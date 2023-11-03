@@ -37,18 +37,6 @@ export default function SearchScreen() {
           <View style={styles.headingContainer}>
             <Text style={styles.heading}>Search</Text>
           </View>
-          {/* <TextInput
-          style={{
-            height: 40,
-            borderColor: 'gray',
-            borderWidth: 1,
-            margin: 10,
-            padding: 5,
-          }}
-          placeholder="Enter your search query"
-          value={query}
-          onChangeText={(text) => setQuery(text)}
-        /> */}
           <View style={styles.searchContainer}>
             <View
               style={{
@@ -86,13 +74,19 @@ export default function SearchScreen() {
                 }
               />
             </View>
-            <View>
+            <View style={styles.inputContainer}>
               <TextInput
                 style={styles.input}
                 placeholder="Enter your search query"
                 value={query}
                 onChangeText={(text) => setQuery(text)}
               />
+              <Text
+                style={styles.advancedSearch}
+                onPress={() => Linking.openURL('http://google.com')}
+              >
+                Advanced Search
+              </Text>
             </View>
           </View>
         </View>

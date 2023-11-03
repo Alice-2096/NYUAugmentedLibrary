@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     // flex: 1,
+    height: '100%',
     // flexDirection: 'column',
     paddingTop: Platform.OS === 'android' ? RStatusBar.currentHeight : 0,
     backgroundColor: '',
@@ -39,12 +40,31 @@ const styles = StyleSheet.create({
     // display: 'flex',
     // flexWrap: 'wrap',
     // flexDirection: 'row',
+    height: '80%',
   },
 
   //input box
   input: {
     backgroundColor: 'white',
+    width: '97%',
+    // flex: 1,
+    height: 30,
+    alignSelf: 'center', // Center horizontally
+    justifyContent: 'center',
   },
+  inputContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    // alignItems: 'center',
+    paddingTop: 30,
+  },
+  advancedSearch: {
+    color: 'white',
+    textAlign: 'right',
+    marginTop: 10,
+    paddingRight: 10,
+  },
+
   button: {
     backgroundColor: 'white',
     marginLeft: '5%',
